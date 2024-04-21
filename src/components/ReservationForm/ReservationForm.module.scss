@@ -1,0 +1,44 @@
+/* Form.module.scss */
+.reservationForm {
+  max-width: 430px;
+  width: 100%;
+  padding: 50px;
+  border-radius: 50px;
+  background: #111111;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  @media screen and (max-width: 480px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .formLabel {
+    font-size: 16px;
+  }
+
+  .formInput {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #282828;
+    border-radius: 16px;
+    background: #282828;
+    color: white;
+    outline: none;
+
+    &:global(.ant-picker) {
+      background: #282828;
+      border: 1px solid #282828;
+    }
+    &:hover {
+      border: 1px solid #ffffff;
+    }
+  }
+
+  .error {
+    position: absolute;
+    color: #ff4d4f; // Red color for errors
+    margin-top: 5px;
+    font-size: 14px;
+  }
+}

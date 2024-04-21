@@ -1,0 +1,43 @@
+.wrapper {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .contactImg {
+    width: 600px;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  .textContainer {
+    max-width: 500px;
+    .title {
+      font-size: 32px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    .description {
+      font-size: 18px;
+    }
+    .link {
+      color: #c19d6d;
+      font-size: 18px;
+      text-decoration: underline;
+    }
+
+    .iconLink {
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      span {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+    }
+  }
+}

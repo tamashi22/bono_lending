@@ -1,0 +1,34 @@
+.wrapper {
+  text-align: center;
+  margin-top: 60px;
+  padding-bottom: 60px;
+  .title {
+    font-size: 48px;
+    margin-bottom: 30px;
+  }
+}
+.itemsWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 248px);
+  justify-content: space-evenly;
+  gap: 20px;
+  .menuItem {
+    width: 248px;
+    height: 300px;
+    padding: 18px 18px 27px 18px;
+    border-radius: 500px 500px 18px 18px;
+    background: #282828;
+    &:hover {
+      color: #c19d6d;
+    }
+    .menuImage {
+      width: 213px;
+      height: 213px;
+      border-radius: 500px;
+    }
+    .menuName {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import "devices";
+@import "colors";
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+@import "swiper/css/autoplay";
+@import "swiper/css/scrollbar";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body {
+  background: $BLACK;
+  color: #ffff;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  @media screen and (max-width: 1200px) {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+a {
+  text-decoration: none;
+  color: #ffff;
+}

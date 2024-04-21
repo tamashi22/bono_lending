@@ -1,0 +1,119 @@
+.wrapper {
+  position: relative;
+}
+.head {
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+}
+.image {
+  width: 100%;
+  height: auto;
+  min-height: 450px;
+}
+.slide {
+  position: relative;
+}
+.content {
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+  bottom: 30%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  .container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+
+    .arrowButton {
+      background: none;
+      border: 0;
+      cursor: pointer;
+      @media screen and (max-width: 768px) {
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+    .next {
+      transform: rotate(180deg);
+    }
+    .text {
+      text-transform: uppercase;
+      max-width: 800px;
+      p {
+        font-size: 24px;
+        @media screen and (max-width: 768px) {
+          font-size: 16px;
+        }
+      }
+      h2 {
+        font-size: 50px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        span {
+          color: #c19d6d;
+        }
+        @media screen and (max-width: 768px) {
+          font-size: 30px;
+        }
+        @media screen and (max-width: 480px) {
+          font-size: 18px;
+        }
+      }
+      .bannerBtn {
+        font-size: 18px;
+        text-transform: uppercase;
+        @media screen and (max-width: 768px) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+.trigger {
+  position: absolute;
+  bottom: 20px;
+  z-index: 99;
+  right: 20px;
+  .triggerImg {
+    @media screen and (max-width: 480px) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+.swiperPagination {
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+  display: flex;
+  z-index: 99;
+  justify-content: center;
+
+  .paginationContainer {
+    display: flex;
+    gap: 5px;
+    height: 20px;
+    align-items: center;
+    padding: 12px;
+
+    background-color: transparent;
+    .swiperPaginationBullet {
+      width: 30px;
+      height: 5px;
+      border-radius: 2px;
+      background-color: white;
+      cursor: pointer;
+    }
+    .swiperPaginationBulletActive {
+      background: #ffffff80;
+    }
+  }
+}
