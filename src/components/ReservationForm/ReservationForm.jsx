@@ -1,11 +1,12 @@
-// Importing React and necessary hooks from react-hook-form and yup for validation
 import React from "react";
-import { useForm } from "react-hook-form";
-import { Controller } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { TimePicker } from "antd";
+import InputMask from "react-input-mask";
+import { ToastContainer, toast } from "react-toastify";
 import { AppButton } from "../ui/AppButton";
 import { reservationSchema } from "./components/validationShema";
+import "react-toastify/dist/ReactToastify.css";
 import styles from "./ReservationForm.module.scss";
 
 const ReservationForm = () => {
@@ -20,6 +21,7 @@ const ReservationForm = () => {
 
   const onSubmit = (data) => {
     console.log(data);
+    toast.success("Бронь отправлена");
     //perform api calls etc
   };
 
@@ -36,9 +38,9 @@ const ReservationForm = () => {
       </label>
       <label className={styles.formLabel}>
         Номер клиента
-        <input
+        <InputMask
+          mask="+999(999)99 99 99" //format if it needed
           className={styles.formInput}
-          type="text"
           {...register("phoneNumber")}
         />
         <p className={styles.error}>{errors.phoneNumber?.message}</p>
@@ -94,6 +96,7 @@ const ReservationForm = () => {
       >
         Забронировать стол
       </AppButton>
+      <ToastContainer position="bottom-left" theme="dark" />
     </form>
   );
 };
